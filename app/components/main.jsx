@@ -212,7 +212,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-4">
-        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Indian Food Recommendation System</h1>
+        <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Chefy<br/>Indian Food Recommendation System</h1>
         <div className="flex justify-center mb-4">
           <button
             className={`px-4 py-2 rounded-l ${!showImageDetection ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'}`}
