@@ -1,5 +1,4 @@
 export default function DietSummary({ meals, nutritionTotals, targetCalories, bmi, bmiCategory }) {
-    // Calculate macronutrient percentages
     const proteinCalories = nutritionTotals.protein_g * 4;
     const carbCalories = nutritionTotals.carbohydrates_total_g * 4;
     const fatCalories = nutritionTotals.fat_total_g * 9;
@@ -8,11 +7,8 @@ export default function DietSummary({ meals, nutritionTotals, targetCalories, bm
     const proteinPct = totalCalories ? Math.round((proteinCalories / totalCalories) * 100) : 0;
     const carbPct = totalCalories ? Math.round((carbCalories / totalCalories) * 100) : 0;
     const fatPct = totalCalories ? Math.round((fatCalories / totalCalories) * 100) : 0;
-
-    // Calculate calorie goal progress
     const goalProgress = targetCalories ? Math.min(100, (totalCalories / targetCalories) * 100) : 0;
 
-    // Get all foods from all meals
     const allFoodItems = Object.values(meals).flat();
 
     return (
